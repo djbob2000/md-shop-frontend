@@ -1,14 +1,5 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Label } from "@/components/ui/label";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 import ShopSelector from "@/components/shop-selector";
 
@@ -25,6 +16,7 @@ export default function Home() {
             <div className="relative w-full h-40 overflow-hidden">
               <Image
                 src={`/products/${index}.jpg`}
+                alt="product image"
                 fill
                 className=" object-cover rounded-lg filter dark:brightness-[0.9]"
               />
