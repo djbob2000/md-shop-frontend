@@ -1,6 +1,6 @@
 import Link from "./Link";
 import headerNavLinks from "@/data/headerNavLinks";
-import Logo from "@/assets/icons/logo.svg";
+// import Logo from "@/assets/icons/logo.svg";
 import { ModeToggle } from "@/components/header/dark-mode-toggle";
 
 export function Header() {
@@ -9,7 +9,7 @@ export function Header() {
       <div>
         <Link href="/">
           <div className="mr-3 dark:text-white">
-            <Logo alt="logo" width={240} height={40} />
+            {/* <Logo alt="logo" width={240} height={40} /> */}
           </div>
         </Link>
       </div>
