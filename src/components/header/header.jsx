@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import headerNavLinks from "@/data/headerNavLinks";
 import Logo from "../../../public/logo.svg";
 import { ModeToggle } from "@/components/header/dark-mode-toggle";

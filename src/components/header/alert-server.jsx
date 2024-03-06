@@ -1,3 +1,6 @@
+import { Terminal } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+
 export default function AlertServer() {
   return (
     <Alert className="max-w-lg">
