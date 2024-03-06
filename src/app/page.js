@@ -25,7 +25,7 @@ export default function Home() {
             <div className="relative w-full h-40 overflow-hidden">
               <Image
                 src={`/products/${index}.jpg`}
-                layout="fill"
+                fill
                 className=" object-cover rounded-lg filter dark:brightness-[0.9]"
               />
             </div>
