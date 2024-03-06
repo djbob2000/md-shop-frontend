@@ -1,6 +1,6 @@
 import Link from "./Link";
 import headerNavLinks from "@/data/headerNavLinks";
-import Logo from "@/assets/icons/logo.svg";
+import Logo from "@/assets/icons/logo-icon.svg";
 import { ModeToggle } from "@/components/header/dark-mode-toggle";
 
 export function Header() {
