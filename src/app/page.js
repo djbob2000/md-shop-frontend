@@ -26,8 +26,7 @@ export default function Home() {
               <Image
                 src={`/products/${index}.jpg`}
                 layout="fill"
-                objectFit="cover"
-                className="rounded-lg filter dark:brightness-[0.9]"
+                className=" object-cover rounded-lg filter dark:brightness-[0.9]"
               />
             </div>
             <CardContent className="p-2">
