@@ -4,7 +4,14 @@
 
 ## How run it
 
-First, run the development server:
+Create .env.local file in root folder of your app and add
+
+```bash
+NEXT_PUBLIC_API_HOST=http://localhost:4000
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+```
+
+Run the development server:
 
 ```bash
 npm install
