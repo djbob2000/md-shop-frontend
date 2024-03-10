@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Medicine Delivery App
 
-## Getting Started
+## How run it
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Overview:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This web application allows users to order medicine delivery from various drug stores. The application has three complexity levels: base, middle, and advanced. Completing tasks with higher complexity increases the chance of admission to the school.
 
-## Learn More
+## Description:
 
-To learn more about Next.js, take a look at the following resources:
+The Medicine Delivery app consists of two main pages:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The Shops page
+- The Shopping Cart page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Requirements:
 
-## Deploy on Vercel
+- **Important**: Instructions on how to run the application are provided in this readme.md file.
+- Source code is uploaded to GitHub/BitBucket/GitLab, and the link is shared.
+- The application is hosted in any suitable manner, and the URL is provided for access.
+- Front-end development can be done in JavaScript with or without any framework, using any preferred design style.
+- Back-end development can be done in NodeJS with or without any framework.
+- Any relational or non-relational database can be used.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Base Level:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Shops Page:**
+
+- Users can choose a drug store and add medicines to the cart (data fetched from the database).
+
+**Shopping Cart Page:**
+
+- Users can view all added products, remove some, or change quantities.
+- Users can input email, phone number, and address.
+- Orders are saved in the database upon clicking the "Submit" button.
+
+### Middle Level:
+
+**Shops Page:**
+
+- All functionalities from the base level.
+- Ability to sort medicines by price and/or date added.
+- Ability to mark medicines as favorites, which are displayed first when sorting.
+
+**Shopping Cart Page:**
+
+- All functionalities from the base level.
+- Cart data is saved in local storage.
+
+### Advanced Level:
+
+**Shops Page:**
+
+- All functionalities from the middle level.
+
+**Shopping Cart Page:**
+
+- All functionalities from the middle level.
+- Integration of Google Maps.
+- Users can choose their address using a pin on the map or enter an address manually.
+- Display the shop from where medicines were ordered on the map.
+- \*(Extra) Show route from shop to user’s address with approximate time.
+- \*(Extra) Implement CAPTCHA validation after clicking the "Create Order" button.
+
+## Additional Ideas:
+
+**Orders History Page:**
+
+- Users can find their orders using email, phone number, or order ID.

@@ -14,6 +14,12 @@ const goodsSlice = createSlice({
     setCurrentShop: (state, { payload }) => {
       state.currentShopID = payload;
     },
+    addToFavorites: (state, { payload }) => {
+      state.favorites.push(payload);
+    },
+    removeFromFavorites: (state, { payload }) => {
+      state.favorites = state.favorites.filter((item) => item !== payload);
+    },
   },
 
   extraReducers: (builder) => {
@@ -32,11 +38,16 @@ const goodsSlice = createSlice({
       });
   },
 });
-export const { setCurrentShop, resetGoods } = goodsSlice.actions;
+export const {
+  setCurrentShop,
+  resetGoods,
+  addToFavorites,
+  removeFromFavorites,
+} = goodsSlice.actions;
 
 const persistConfig = {
   key: "goods",
   storage,
-  whitelist: ["goods"],
+  whitelist: ["goods", "favorites"],
 };
 export const goodsReducer = persistReducer(persistConfig, goodsSlice.reducer);
