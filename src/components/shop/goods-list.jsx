@@ -37,7 +37,7 @@ const GoodsList = () => {
     return [...favoritesItems, ...nonFavorites];
   };
 
-  if (status === "loading") {
+  if (status === "loading" || !selectedGoods) {
     return <div>Loading...</div>;
   }
 
