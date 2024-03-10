@@ -36,7 +36,7 @@ const History = () => {
   }, [selectedOrders, searchId, searchEmail, searchPhone]);
 
   return (
-    <div className="container mx-auto py-10">
+    <section className="container mx-auto py">
       <div className="flex flex-col sm:flex-row justify-center space-x-4 mb-4">
         <label>
           Id:
@@ -71,7 +71,7 @@ const History = () => {
       ) : (
         <p className="text-center text-gray-600 text-lg">No orders found!</p>
       )}
-    </div>
+    </section>
   );
 };
 

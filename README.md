@@ -1,5 +1,7 @@
 # Medicine Delivery App
 
+**Attention**: The backend part is hosted on a free Render server plan, so the initial launch of the application may take up to 50 seconds!
+
 ## How run it
 
 First, run the development server:
