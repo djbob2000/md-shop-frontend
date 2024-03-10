@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import axios from "axios";
 
-// axios.defaults.baseURL = process.env.API_HOST;
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_HOST;
 
 export const fetchGoods = createAsyncThunk(
   "goods/fetchGoods",
@@ -10,15 +10,12 @@ export const fetchGoods = createAsyncThunk(
     try {
       const { currentShopID } = thunkAPI.getState().goods;
 
-      const { data } = await axios.get(
-        `http://localhost:4000/shops/${currentShopID}/products`,
-        {
-          // params: {
-          //   page: 1,
-          //   limit: 30,
-          // },
-        }
-      );
+      const { data } = await axios.get(`/shops/${currentShopID}/products`, {
+        // params: {
+        //   page: 1,
+        //   limit: 30,
+        // },
+      });
       return data;
     } catch (error) {
       console.log(error);

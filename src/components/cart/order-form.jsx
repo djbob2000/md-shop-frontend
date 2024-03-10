@@ -45,7 +45,7 @@ export default function OrderForm() {
 
   const form = useForm({
     defaultValues,
-    // resolver: zodResolver(schema),
+    resolver: zodResolver(schema),
     mode: "onChange",
   });
 
