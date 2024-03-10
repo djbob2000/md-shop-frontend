@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { goodsReducer } from "./goods/goods.slice";
 import { cartReducer } from "./cart/cart.slice";
 import { ordersReducer } from "./orders/orders.slice";
+import { couponsReducer } from "./coupons/coupons.slice";
 
 import {
   persistStore,
@@ -20,6 +21,7 @@ export const store = configureStore({
     goods: goodsReducer,
     cart: cartReducer,
     orders: ordersReducer,
+    coupons: couponsReducer,
   },
 
   middleware: (getDefaultMiddleware) =>
