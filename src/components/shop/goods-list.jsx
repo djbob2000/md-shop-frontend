@@ -10,7 +10,11 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CardItem from "./card-item";
 
 const GoodsList = () => {
-  const selectedGoods = useSelector(selectGoods);
+  const {
+    goods: selectedGoods,
+    status,
+    error,
+  } = useSelector((state) => state.goods);
   const currentShopID = useSelector(selectCurrentShopID);
   const favorites = useSelector((state) => state.goods.favorites);
   const dispatch = useDispatch();
@@ -33,10 +37,18 @@ const GoodsList = () => {
     return [...favoritesItems, ...nonFavorites];
   };
 
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (status === "failed") {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div className="w-full min-h-11 grid gap-x-4 gap-y-8 grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4">
-      <div className="col-span-full w-full flex gap-6  items-center">
-        <p className="">Sort by </p>
+      <div className="col-span-full w-full flex gap-6 ">
+        <p className="py-2">Sort by </p>
         <Tabs defaultValue="name" className="">
           <TabsList>
             <TabsTrigger
