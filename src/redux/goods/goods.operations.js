@@ -21,5 +21,5 @@ export const fetchGoods = createAsyncThunk(
       console.log(error);
       return thunkAPI.rejectWithValue(error);
     }
-  }
+  },
 );

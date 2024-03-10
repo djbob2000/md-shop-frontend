@@ -15,7 +15,7 @@ export const fetchCoupons = createAsyncThunk(
       console.log(error);
       return thunkAPI.rejectWithValue(error);
     }
-  }
+  },
 );
 
 const couponsSlice = createSlice({
@@ -51,5 +51,5 @@ const persistConfig = {
 };
 export const couponsReducer = persistReducer(
   persistConfig,
-  couponsSlice.reducer
+  couponsSlice.reducer,
 );

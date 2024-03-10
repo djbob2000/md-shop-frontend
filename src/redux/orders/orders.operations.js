@@ -15,7 +15,7 @@ export const addOrder = createAsyncThunk(
       console.log(error);
       return thunkAPI.rejectWithValue(error);
     }
-  }
+  },
 );
 
 export const fetchOrders = createAsyncThunk(
@@ -33,5 +33,5 @@ export const fetchOrders = createAsyncThunk(
       console.log(error);
       return thunkAPI.rejectWithValue(error);
     }
-  }
+  },
 );

@@ -12,7 +12,7 @@ const cartSlice = createSlice({
       console.log("🚀 ~ addToCart ~ payload:", payload);
       const productId = payload._id;
       const existingProduct = state.cartGoods.find(
-        (item) => item._id === productId
+        (item) => item._id === productId,
       );
 
       if (existingProduct) {

@@ -28,7 +28,7 @@ export default function ShopRadioGroup() {
           <label
             className={cn(
               "text-sm font-medium leading-none flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground",
-              currentShopID === shop.id && "border-primary"
+              currentShopID === shop.id && "border-primary",
             )}
           >
             <input

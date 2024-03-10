@@ -11,9 +11,9 @@ export const selectCartGoodsByShopId = createSelector(
   selectCurrentShopID,
   (cartGoods, currentShopID) => {
     const filtered = cartGoods.filter(
-      (item) => item.shopId === currentShopID.toString()
+      (item) => item.shopId === currentShopID.toString(),
     );
 
     return filtered;
-  }
+  },
 );

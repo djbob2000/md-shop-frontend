@@ -16,7 +16,7 @@ export default function NavMenu() {
           href={link.href}
           className={cn(
             "font-medium text-gray-900 dark:text-gray-100 sm:block ",
-            pathname === link.href && "font-bold underline underline-offset-8"
+            pathname === link.href && "font-bold underline underline-offset-8",
           )}
         >
           {link.title}
