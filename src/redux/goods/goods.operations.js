@@ -6,15 +6,15 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_HOST;
 
 export const fetchGoods = createAsyncThunk(
   "goods/fetchGoods",
-  async (_, thunkAPI) => {
+  async ({ sortBy, sortOrder }, thunkAPI) => {
     try {
       const { currentShopID } = thunkAPI.getState().goods;
 
       const { data } = await axios.get(`/shops/${currentShopID}/products`, {
-        // params: {
-        //   page: 1,
-        //   limit: 30,
-        // },
+        params: {
+          sortBy: sortBy,
+          sortOrder: sortOrder,
+        },
       });
       return data;
     } catch (error) {

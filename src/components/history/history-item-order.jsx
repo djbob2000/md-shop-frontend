@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 const HistoryItemOrder = ({ itemOrder }) => {
-  console.log("🚀 ~ HistoryItemOrder ~ itemOrder:", itemOrder);
   return (
     <div className="rounded-xl border bg-card text-card-foreground p-2  w-[300px]">
       <div className="grid grid-cols-[3fr_1fr]">
